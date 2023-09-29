@@ -1,6 +1,6 @@
 import express from "express";
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 const app = express();
 app.get("/", async (req, res, next) => {
   res.send({
@@ -8,5 +8,5 @@ app.get("/", async (req, res, next) => {
   });
 });
 app.listen(PORT, () => {
-  console.log("server is running on  http://localhost:3000");
+  console.log(`server is running on  http://localhost:${PORT}`);
 });
